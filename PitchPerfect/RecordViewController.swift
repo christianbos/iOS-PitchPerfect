@@ -29,10 +29,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(sender: AnyObject) {
-        recordingLabel.text = "Grabando"
-        stoprecButton.enabled = true
-        recordingButton.enabled = false
-        
+        recordStatus(true)
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)[0] as String
         let recordingName = "recordVoice.wav"
         let pathArray = [dirPath, recordingName]
@@ -50,9 +47,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording(sender: AnyObject) {
-        recordingLabel.text = "Graba"
-        stoprecButton.enabled = false
-        recordingButton.enabled = true
+        recordStatus(false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
@@ -66,11 +61,22 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         print("AVAudioRecorder finished saving audio...")
         if (flag) {
-            self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
+            performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
         }
         else {
             print("Saving of recording failed")
         }
+    }
+    
+    func recordStatus(recording: Bool) {
+        if recording {
+            recordingLabel.text == "Grabando"
+        }
+        else {
+            recordingLabel.text == "Graba"
+        }
+        stoprecButton.enabled = recording
+        recordingButton.enabled = !recording
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
