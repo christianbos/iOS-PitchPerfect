@@ -29,8 +29,14 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7LU-F8-kvg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presiona para grabar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEH-Ix-3dl">
+                                <rect key="frame" x="204" y="208" width="160" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSv-Wx-1V7">
-                                <rect key="frame" x="268" y="259" width="32" height="32"/>
+                                <rect key="frame" x="268" y="239" width="32" height="32"/>
                                 <state key="normal" image="stopButton">
                                     <color key="titleColor" red="0.73333333333333328" green="0.2627450980392157" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -38,12 +44,6 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRZ-Ku-qnO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presiona para grabar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEH-Ix-3dl">
-                                <rect key="frame" x="204" y="208" width="160" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -51,7 +51,7 @@
                             <constraint firstItem="vEH-Ix-3dl" firstAttribute="top" secondItem="C4K-SL-axn" secondAttribute="bottom" constant="32" id="0eA-gt-nzh"/>
                             <constraint firstItem="C4K-SL-axn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FMk-kz-OoP"/>
                             <constraint firstItem="pSv-Wx-1V7" firstAttribute="centerX" secondItem="vEH-Ix-3dl" secondAttribute="centerX" id="K1b-Dl-5SU"/>
-                            <constraint firstItem="pSv-Wx-1V7" firstAttribute="top" secondItem="vEH-Ix-3dl" secondAttribute="bottom" constant="30" id="mhB-d9-YJh"/>
+                            <constraint firstItem="pSv-Wx-1V7" firstAttribute="top" secondItem="vEH-Ix-3dl" secondAttribute="bottom" constant="10" id="mhB-d9-YJh"/>
                             <constraint firstItem="vEH-Ix-3dl" firstAttribute="centerX" secondItem="C4K-SL-axn" secondAttribute="centerX" id="wtf-Ja-g7Z"/>
                         </constraints>
                     </view>
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="339"/>
+            <point key="canvasLocation" x="1040.625" y="338.02816901408448"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="BIL-UF-p6f">
@@ -123,7 +123,7 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xib-Rv-ZhX">
                                         <rect key="frame" x="0.0" y="128" width="528" height="64"/>
                                         <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZf-n8-YrR" userLabel="echoButton">
+                                            <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZf-n8-YrR" userLabel="echoButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="264" height="64"/>
                                                 <state key="normal" image="echoButton"/>
                                                 <connections>
